@@ -1,0 +1,389 @@
+/* HTML */
+body 
+{
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+/* LOGIN */
+.login{
+    display: flex;
+    width: 65%;
+    align-items: center;
+    margin: auto;
+    margin-top: 1%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 3%;
+    margin-bottom: 10%;
+    margin-top: 7%;
+    padding-right: 5%;
+    background: white;
+    border-radius: 10px;
+}
+.login .left .logo
+{
+    margin-left: 13%;
+}
+.login .left .logo span
+{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.login .left .logo span img
+{
+    width: 150px;
+}
+.login .left .img
+{
+    margin-top: 15%;
+    text-align: center;
+}
+.login .left
+{
+    width: 50%;
+    float: left;
+}
+.login .left .img img
+{
+    width: 75%;
+}
+.login .right form {
+    width: 80%;
+    margin-top: 8%;
+}
+.login .right .d_input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+    background: #eff2f4;
+    padding: 2px 0px;
+    color: #babdc3;
+    padding-left: 5%;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.login .right .d_input i{
+    font-size: 20px;
+    color: #393535;
+}
+.login .right .d_input .right_input{
+    margin-left: 20px;
+}
+.login .right .d_input .right_input{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.login .right .d_input .right_input input {
+    border: 0px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: 0;
+    color: #393535;
+}
+.login .right .d_input i.fa.fa-thin.fa-lock {
+    font-size: 20px;
+    color: #393535;
+}
+.login .right .d_input a{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.login .right{
+    width: 50%;
+    float: left;
+    margin-top: 3%;
+    padding-left: 5%;
+    margin-bottom: 5%;
+}
+.login .right a{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 6%;
+    margin-top: 5%;
+    color: black;
+}
+.login .right .btn1 {
+    border: 0;
+    background: #4c7031;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    margin-right: 4%;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+.login .right .btn3 {
+    border: 0;
+    background: #4285f4;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    margin-right: 4%;
+    cursor: pointer;
+    font-size: 15px;
+}
+.login .right .btn2 {
+    font-size: 15px;
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+    width:auto;
+}
+.login .right h2{
+    margin-top: 0px;
+    color: #393535;
+}
+.login .right h3{
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: 300;
+    padding-right: 3%;
+    color: #393535;
+}
+.login .right form .d_input select{
+    border: 0px;
+    margin-top: 10%;
+    background: transparent;
+    margin-left: -5px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: black;
+}
+.login .right form .d_input:nth-child(2){
+    margin-bottom: 10%;
+}
+.login{
+    opacity: 0;
+    transform: translateY(1000px);
+}
+
+/* POP UP CLOSE */
+.close_btn
+{
+    width: 90%;
+    display: inline-block;
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* SIGNUP */
+.signup
+{
+    display: flex;
+    width: 65%;
+    align-items: center;
+    margin: auto;
+    margin-top: 1%;
+    padding-bottom: 3%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding-top: 3%;
+    margin-bottom: 10%;
+    margin-top: 2.5%;
+    padding-right: 5%;
+    opacity: 0;
+    transform: translateY(500px);
+    background-color: white;border-radius: 10px;
+}
+.signup .right
+{
+    width: 50%;
+    float: left;
+    padding-left: 8%;
+}
+.signup .right h2
+{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.signup .right h3
+{
+    margin-top: 0px;
+    font-size: 15px;
+    font-weight: 300;
+    padding-right: 3%;
+}
+.signup .right form 
+{
+    width: 80%;
+    margin-top: 8%;
+}
+.signup .left .logo span img{width: 150px;}
+.signup .right .d_input
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4%;
+    background: #eff2f4;
+    padding: 2px 0px;
+    color: #babdc3;
+    padding-left: 5%;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.signup .right .d_input .right_input
+{
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.signup .right .d_input .right_input
+{
+    margin-left: 20px;
+}
+.signup .right .d_input .right_input span
+{
+    font-size: 14px;
+}
+.signup .right .d_input .right_input input
+{
+    border: 0px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: 0;
+}
+.signup .right a
+{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 6%;
+    margin-top: 5%;
+    color: black;
+}
+.signup .right .btn1
+{
+    border: 0;
+    background: #4c7031;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin-right: 4%;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.signup .right .btn2
+{
+    font-size: 15px;
+    background: transparent;
+    border: 0px;
+    cursor: pointer;
+    width:auto;
+}
+.signup .left
+{
+    width: 50%;
+    float: left;
+}
+.signup .left .logo
+{
+    margin-right: 13%;
+    text-align: right;
+}
+.signup .left .logo span
+{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.signup .left .img
+{
+    margin-top: 60%;
+    text-align: right;
+}
+.signup .left .img img
+{
+    width: 40%;
+}
+.signup .right form .d_input select
+{
+    border: 0px;
+    margin-top: 10%;
+    background: transparent;
+    margin-left: -5px;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: black;
+}
+
+/* CHOICE */
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 12% 0%;
+    width: 75%;
+    margin: auto;
+    margin-top: 10%;
+}
+.choice{
+    opacity: 0;
+    transform: translateY(1000px);
+}
+.choice a {
+    background: #4c7031;
+    margin: 0% 4%;
+    padding: 1% 3%;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 20px;
+}
+a.ch2{
+    background: black;
+}
+.img_choice{
+    text-align: right;
+    margin-top: 2%;
+}
+.img_choice img{
+    width: 12%;
+    margin-right: 5%;
+}
+
+/* ASK SERVICE */
+.ask{
+    width: 70%;
+    margin: auto;   
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px;
+    padding: 8% 4%;
+    margin-top: 6%; 
+}
+.ask{
+    transform: translateY(1000px);
+    opacity: 0;
+}
+.form_sides{
+    display: flex;
+    justify-content: space-around;
+}
+.form_sides textarea{
+    margin-top: 5%;
+    padding-left: 1%;
+}
+.form_sides input{
+    width: 100%;
+    margin-bottom: 7%;
+    padding: 2% 0%;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: 0;
+    margin-top: 5%;
+    padding-left: 1%;
+}
+ .btn1_ask{
+    border: 0;
+    background: #4c7031;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin-right: 4%;
+    margin-left: 5%;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
