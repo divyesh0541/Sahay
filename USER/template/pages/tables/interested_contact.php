@@ -2,7 +2,14 @@
 <html lang="en">
 
 <head>
-  <?php include('../../../../links.php'); ?>
+  <?php 
+  include('../../../../links.php'); 
+  include('../../../../Database/user_type.php');
+  include('../../../../Database/applied_works.php');
+     if(!isset($_SESSION['email'])){
+     header('Location:../../../../login.php');
+    }
+     ?>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,6 +28,17 @@
   <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../../../img/logo3.png" />
+  <style>
+    .d_i{
+      font-size: 20px;
+    margin-right: 12%;
+    }
+    .d_td{
+      white-space: inherit !important;
+      line-height:18px !important;
+      font-size:14px !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -98,7 +116,7 @@
           </li>
           <li class="nav-item dropdown"> 
             <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="icon-bell"></i>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
               <span class="count"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
@@ -333,69 +351,60 @@
       <!-- partial:../../partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
+          <?php
+            if(isset($_SESSION['type'])){
+              if($_SESSION['type']=="service"){
+
+          ?>
           <li class="nav-item">
-            <a class="nav-link" href="../../index.html">
+            <a class="nav-link" href="all_work.php">
               <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title">Explore Works Here</span>
             </a>
           </li>
-          <li class="nav-item nav-category">Work Asked</li>
+           <li class="nav-item nav-category">Contacts</li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="menu-icon mdi mdi-card-text-outline"></i>
+            <a class="nav-link" href="interested_contact.php">
+            <i class="fa-solid fa-heart d_i"></i>
+              <span class="menu-title">Interested Contacts</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="accepted_contact.php">
+            <i class="fa fa-light fa-handshake d_i"></i>
+              <span class="menu-title">Accepted Contacts</span>
+            </a>
+          </li>
+          <?php
+            }else{
+              ?>
+              <li class="nav-item nav-category">Work</li>
+          <li class="nav-item">
+            <a class="nav-link" href="work_enquiry.php">
+            <i class="fa fa-thin fa-tty d_i"></i>
               <span class="menu-title">Work Enquiries</span>
-              <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/basic_elements.html">Basic Elements</a></li>
-              </ul>
-            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="menu-icon mdi mdi-chart-line"></i>
+            <a class="nav-link" href="accepted_work.php">
+            <i class="fa-sharp fa-regular fa-circle-check d_i"></i>
               <span class="menu-title">Accepted Works</span>
-              <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/chartjs.html">ChartJs</a></li>
-              </ul>
-            </div>
           </li>
           <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="menu-icon mdi mdi-chart-line"></i>
+            <a class="nav-link" href="pending_work.php">
+            <i class="fa-regular fa-clock d_i"></i>
               <span class="menu-title">Pending Works</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="../../pages/charts/chartjs.html">ChartJs</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item nav-category">Your Works</li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-              <i class="menu-icon mdi mdi-card-text-outline"></i>
-              <span class="menu-title">My Works</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="form-elements">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="../../pages/forms/basic_elements.html">Basic Elements</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item nav-category">help</li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-              <i class="menu-icon mdi mdi-file-document"></i>
-              <span class="menu-title">Documentation</span>
             </a>
           </li>
+             <?php
+            }
+
+        }else{
+          header('Location:../../../../login.php');
+        }
+          ?>
+          
         </ul>
       </nav>
       <!-- partial -->
@@ -405,9 +414,9 @@
             <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Striped Table</h4>
+                  <h4 class="card-title">Contacts (Interested)</h4>
                   <p class="card-description">
-                    Add class <code>.table-striped</code>
+                  By <code>You</code>
                   </p>
                   <div class="table-responsive">
                     <table class="table table-striped">
@@ -428,20 +437,31 @@
                         </tr>
                       </thead>
                       <tbody>
+                        <?php
+                            $counter=1;
+                            foreach ($_SESSION['applied_data'] as $row) {
+                          ?>
                         <tr>
+                          
                           <td>
-                            #1
+                            #<?php echo $row['work_id'];
+                              $counter+=1;
+                            ?>
                           </td>
                           <td>
-                            Paint my home
+                            <?php echo $row['work_for'];?>
+                          </td>
+                          <td class="d_td">
+                            <?php echo $row['brief']; ?>
                           </td>
                           <td>
-                            I want to paint my entire home so if anyone could work on that please contact me
-                          </td>
-                          <td>
-                          ₹ 1000
+                          ₹ <?php echo $row['charge'] ?>
                           </td>
                         </tr>
+                        <?php
+                      }
+                     
+                      ?>
                       </tbody>
                     </table>
                   </div>

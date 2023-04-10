@@ -3,12 +3,12 @@
 <head>
     <?php include('links.php'); ?>
 
-    <?php
+   <!--  <?php
         if (isset($_POST['submit']))
         {
             header('location:choice.php');
         }
-    ?>
+    ?> -->
     <title>- Login</title>
 </head>
 <body>
@@ -26,14 +26,14 @@
             <h2>Login Into सAHAY</h2>
             <h2>Welcome Back :)</h2>
             <h3>To keep connected with us please login with your personal information by email address and password.</h3>
-            <form method="POST">
+            <form method="POST" action="Database/login.php">
                 <div class="d_input">
                     <div class="left_input">
                         <i class="fa fa-thin fa-envelope"></i>
                     </div>
                     <div class="right_input">
                         <span>Email Address</span><br>
-                        <input type="email">
+                        <input type="email" name="email" required>
                     </div>
                 </div>
                 <div class="d_input">
@@ -42,7 +42,7 @@
                     </div>
                     <div class="right_input">
                         <span>Password</span><br>
-                        <input type="password">
+                        <input type="password" name="password" required>
                     </div>
                 </div>
                 <!-- <a href="#" class="fg">Forgot Password ?</a> -->
